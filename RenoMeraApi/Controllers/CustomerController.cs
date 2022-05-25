@@ -20,12 +20,18 @@ namespace RenoMeraApi.Controllers
 
             [HttpGet]
             [Route("post")]
-            public async Task<ActionResult<IEnumerable<ConstructionPost>>> GetPost()
+            public async Task<ActionResult<IEnumerable<CustomerPost>>> GetPost()
             {
                 var data = await customerRepository.GetAllPost();
                 return Ok(data);
             }
 
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<IEnumerable<CustomerPost>>> GetPostsById(string Id)
+        {   
+            var data = await customerRepository.GetAllPostById(Id);
+            return Ok(data);
+        }
         [Route("newpost")]
         [HttpPost]
         public ActionResult AddNewPost([FromBody] CustomerPost customerPost)
@@ -36,6 +42,7 @@ namespace RenoMeraApi.Controllers
                 var newPost = new CustomerPost
                 {
                      Title = customerPost.Title,
+                     UserId = customerPost.UserId,
                      Description = customerPost.Description,
                      City = customerPost.City,
                      Image = customerPost.Image,

@@ -2,6 +2,7 @@
 using RenoMeraApi.Domain.Models;
 using RenoMeraApi.Persistence;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RenoMeraApi.Domain.Repositories
@@ -25,6 +26,11 @@ namespace RenoMeraApi.Domain.Repositories
         {
             return await context.constructionPosts.ToArrayAsync();
          }
+
+        public async Task<IEnumerable<ConstructionPost>> GetAllPostById(string Id)
+        {
+            return await context.constructionPosts.Where(c => c.UserId == Id).ToArrayAsync();
+        }
 
         public void UpdateConstructionPost(ConstructionPost constructionPost)
         {

@@ -33,15 +33,14 @@ namespace RenoMeraApi.Controllers
                     {
                         Role = user.Role,
                         UserName = user.UserName,
-                        Password = user.PassWord,
-                        TypeOfAccount = user.TypeOfAccount,
-                        City = user.City
+                        Password = user.PassWord
           
     };
                     var AddUser = await userManager.CreateAsync(newUser, newUser.Password);
                     if (AddUser.Succeeded)
                     {
-                        return Ok();
+                    var getUser = userRepository.GetByUserName(newUser.UserName);
+                    return Ok(getUser.Id);
                     }
                     else
                     {
@@ -69,16 +68,20 @@ namespace RenoMeraApi.Controllers
 
                     if (result.Succeeded)
                     {
-                        return Ok();
+                        return Ok(new
+                        {
+                            Id = user.Id,
+                            Role = user.Role
+                        });
                      }
                     else
                     {
-                        return BadRequest();
+                        return BadRequest("Password Or username error");
                     }
                 }
                 else
                 {
-                    return BadRequest();
+                    return BadRequest("User Not Found");
                 }
 
             }

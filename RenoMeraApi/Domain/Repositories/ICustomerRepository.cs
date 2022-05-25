@@ -8,6 +8,8 @@ namespace RenoMeraApi.Domain.Repositories
     {
 
         Task<IEnumerable<CustomerPost>> GetAllPost();
+        Task<IEnumerable<CustomerPost>> GetAllPostById(string Id);
+
         void UpdateCustomerPost(CustomerPost customerPost);
         void Add(CustomerPost customerPost);
     }

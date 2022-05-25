@@ -3467,11 +3467,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramia\\source\\repos\\RenoMeraApi\\RenoMeraApi\\RenoMeraApi.csproj",
+      "projectUniqueName": "C:\\Users\\ramia\\OneDrive\\Skrivbord\\ApiReno\\RenoApi\\RenoMeraApi\\RenoMeraApi.csproj",
       "projectName": "RenoMeraApi",
-      "projectPath": "C:\\Users\\ramia\\source\\repos\\RenoMeraApi\\RenoMeraApi\\RenoMeraApi.csproj",
+      "projectPath": "C:\\Users\\ramia\\OneDrive\\Skrivbord\\ApiReno\\RenoApi\\RenoMeraApi\\RenoMeraApi.csproj",
       "packagesPath": "C:\\Users\\ramia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramia\\source\\repos\\RenoMeraApi\\RenoMeraApi\\obj\\",
+      "outputPath": "C:\\Users\\ramia\\OneDrive\\Skrivbord\\ApiReno\\RenoApi\\RenoMeraApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
